@@ -71,6 +71,5 @@ namespace PierresVendorMgmt.Tests
       Order result = Order.Find(2);
       Assert.AreEqual(order2, result);
     }
-
   }
 }

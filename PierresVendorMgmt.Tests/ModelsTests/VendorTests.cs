@@ -14,7 +14,7 @@ namespace PierresVendorMgmt.Tests
     [TestMethod]
     public void Vendor_CorrectlyCreatesAnInstanceOfAnOrder_Order()
     {
-      Vendor newVendor = new Vendor();
+      Vendor newVendor = new Vendor("Test", "Test");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
     [TestMethod]
