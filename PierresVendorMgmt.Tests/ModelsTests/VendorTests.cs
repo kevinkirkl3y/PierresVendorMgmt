@@ -57,7 +57,7 @@ namespace PierresVendorMgmt.Tests
       List<Order> orderList = new List<Order> {newOrder};
       Vendor newVendor = new Vendor("Test", "Test");
       newVendor.AddOrder(newOrder);
-      List<Vendor> result = newVendor.Orders;
+      List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(orderList, result);
     }
   }
