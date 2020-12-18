@@ -26,6 +26,7 @@ namespace PierresVendorMgmt.Tests
       Assert.AreEqual(price, newOrder.Price);
       Assert.AreEqual(date, newOrder.Date);
     }
+    [TestMethod]
     public void OrderConstructor_CorrectlyUpdatesProperiesOfOrder_UpdatedProperties()
     {
       Order newOrder = new Order("This", "Is", 4, "test");
@@ -41,9 +42,6 @@ namespace PierresVendorMgmt.Tests
       Assert.AreEqual(updatedDescription, newOrder.Description);
       Assert.AreEqual(updatedPrice, newOrder.Price);
       Assert.AreEqual(updatedDate, newOrder.Date);
-
-
-
     }
 
   }
