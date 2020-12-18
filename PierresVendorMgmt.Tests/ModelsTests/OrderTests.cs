@@ -5,8 +5,12 @@ using System;
 namespace PierresVendorMgmt.Tests
 {
   [TestClass]
-  public class OrderTest
+  public class OrderTest : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
     [TestMethod]
     public void Order_CorrectlyCreatesAnInstanceOfAnOrder_Order()
     {
