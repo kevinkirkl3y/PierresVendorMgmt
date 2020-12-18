@@ -16,12 +16,12 @@ namespace PierresVendorMgmt.Tests
     [TestMethod]
     public void OrderConstructor_CorrectlyReturnsPropertiesOfOrder_Properties()
     {
-      string name = "Test";
+      string title = "Test";
       string description = "Test";
       int price = 1;
       string date = "12.18.2020";
-      Order newOrder = new Order(name, description, price, date);
-      Assert.AreEqual(name, newOrder.Name);
+      Order newOrder = new Order(title, description, price, date);
+      Assert.AreEqual(title, newOrder.Title);
       Assert.AreEqual(description, newOrder.Description);
       Assert.AreEqual(price, newOrder.Price);
       Assert.AreEqual(date, newOrder.Date);
