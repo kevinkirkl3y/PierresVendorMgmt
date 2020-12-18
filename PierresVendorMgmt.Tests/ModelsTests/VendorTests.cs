@@ -42,5 +42,13 @@ namespace PierresVendorMgmt.Tests
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      Vendor vendor1 = new Vendor("test1", "test1");
+      Vendor vendor2 = new Vendor("test2", "test2");
+      Vendor result = Vendor.Find(2);
+      Assort.AreEqual(vendor2, result);
+    }
   }
 }
