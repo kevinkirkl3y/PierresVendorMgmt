@@ -54,6 +54,15 @@ namespace PierresVendorMgmt.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetAll_CorrectlyReturnsOrderObjectsInList_OrderList()
+    {
+       Order order1 = new Order("This", "Is", 4, "test");
+       Order order2 = new Order("This", "IsAlso", 4, "test");
+       List<Order> newList = new List<Order> { order1, order2};
+       List<Order> result = Order.GetAll();
+       CollectionAssert.AreEqual(newList, result);
+    }
 
   }
 }
