@@ -10,7 +10,7 @@ namespace PierresVendorMgmt.Tests
     [TestMethod]
     public void Order_CorrectlyCreatesAnInstanceOfAnOrder_Order()
     {
-      Order newOrder = new Order();
+      Order newOrder = new Order("test", "test", 1, "test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod]
