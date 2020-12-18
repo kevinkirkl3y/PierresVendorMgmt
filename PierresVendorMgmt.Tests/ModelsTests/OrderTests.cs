@@ -70,7 +70,6 @@ namespace PierresVendorMgmt.Tests
       Order order2 = new Order("This", "IsAlso", 4, "test");
       Order result = Order.Find(2);
       Assert.AreEqual(order2, result);
-
     }
 
   }
