@@ -9,7 +9,7 @@ namespace PierresVendorMgmt.Tests
   {
     public void Dispose()
     {
-      //VendorTests.ClearAll();
+      Vendor.ClearAll();
     }
     [TestMethod]
     public void Vendor_CorrectlyCreatesAnInstanceOfAnOrder_Order()
@@ -25,6 +25,13 @@ namespace PierresVendorMgmt.Tests
       Vendor newVendor = new Vendor(name, description);
       Assert.AreEqual(name, newVendor.Name);
       Assert.AreEqual(description, newVendor.Description);
+    }
+    [TestMethod]
+    public void GetId_ReturnsCorrectIdOfVendor_Id()
+    {
+    Vendor newVendor = new Vendor("Test", "Test");
+    int result = newVendor.Id;
+    Assert.AreEqual(1, result);
     }
   }
 }
