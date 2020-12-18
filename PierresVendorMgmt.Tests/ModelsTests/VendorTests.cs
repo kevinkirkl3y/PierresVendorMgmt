@@ -33,5 +33,14 @@ namespace PierresVendorMgmt.Tests
     int result = newVendor.Id;
     Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorInstances_VendorList()
+    {
+      Vendor vendor1 = new Vendor("test1", "test1");
+      Vendor vendor2 = new Vendor("test2", "test2");
+      List<Vendor> newList = new List<Vendor>{vendor1, vendor2};
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
