@@ -4,6 +4,6 @@ namespace PierresVendorMgmt.Models
 {
   public class Order
   {
-
+    
   }
 }
