@@ -26,6 +26,25 @@ namespace PierresVendorMgmt.Tests
       Assert.AreEqual(price, newOrder.Price);
       Assert.AreEqual(date, newOrder.Date);
     }
+    public void OrderConstructor_CorrectlyUpdatesProperiesOfOrder_UpdatedProperties()
+    {
+      Order newOrder = new Order("This", "Is", 4, "test");
+      string updatedTitle = "Not";
+      newOrder.Title = updatedTitle;
+      string updatedDescription = "A";
+      newOrder.Description = updatedDescription;
+      int updatedPrice = 10;
+      newOrder.Price = updatedPrice;
+      string updatedDate = "Spared";
+      newOrder.Date = updatedDate;
+      Assert.AreEqual(updatedTitle, newOrder.Title);
+      Assert.AreEqual(updatedDescription, newOrder.Description);
+      Assert.AreEqual(updatedPrice, newOrder.Price);
+      Assert.AreEqual(updatedDate, newOrder.Date);
+
+
+
+    }
 
   }
 }
