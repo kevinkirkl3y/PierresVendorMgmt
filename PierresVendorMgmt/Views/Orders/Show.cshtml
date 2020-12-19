@@ -2,13 +2,15 @@
   Layout = "_Layout";
 }
 @using PierresVendorMgmt.Models;
-<h1>@Model.Name Order Details: </h1>
+<div class="container">
+  <h1>@Model["vendor"].Name Order Details: </h1>
 
-<h2>@Model["order"].Title</h2>
-<h2>@Model["order"].Description</h2>
-<h2>$@Model["order"].Price</h2>
-<h2>Placed: @Model["order"].Date</h2>
-<h3>Vendor: @Model["vendor"].Name</h3>
+  <h3>@Model["order"].Title</h3>
+  <h3>@Model["order"].Description</h3>
+  <h3>$@Model["order"].Price</h3>
+  <h3>Placed: @Model["order"].Date</h3>
+  <h3>Vendor: @Model["vendor"].Name</h3>
 
-<a href='/vendors/@Model["vendor"].Id/orders/new'>Create New Order</a>
+<a href='/vendors/@Model["vendor"].Id/orders/new'>Create New Order</a><br>
 <a href='/vendors'>Vendors</a>
+</div>

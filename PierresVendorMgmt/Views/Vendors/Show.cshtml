@@ -3,16 +3,17 @@
 }
 
 @using PierresVendorMgmt.Models;
+  <h1 class="jumbotron">Current Vendors of Pierre's Handcrafted Baked Goods</h3>
+<div class="container">
 
-<h3>Current Vendors of Pierre's Handcrafted Baked Goods</h3>
+  <ol>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li id="orders"><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  }
+  </ol>
 
-<ol>
-@foreach (Order order in @Model["orders"])
-{
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
-}
-</ol>
-
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order:</a></p>
-<p><a href='/vendors'>Return to Vendors</a></p>
-<p><a href='/'>Return to Main Page</a></p>
+  <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order:</a></p><br>
+  <p><a href='/vendors'>Return to Vendors</a></p><br>
+  <p><a href='/'>Return to Main Page</a></p>
+</div>
